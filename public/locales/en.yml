@@ -10,29 +10,31 @@ en:
       our collection of online sheet music, %{levycoll}.
       or our data repository, %{datarepo}.
 
-  contactus:
-    name:
-      short: Contact Us!
-      long: Contact Us!
-    url: mailto:specialcollections@lists.jhu.edu
+  plugins:
+    jhu_public:
+      contactus:
+        name:
+          short: Contact Us!
+          long: Contact Us!
+        url: mailto:specialcollections@lists.jhu.edu
 
-  instrepo:
-    name:
-      short: JScholarship
-      long: JScholarship
-    url: https://jscholarship.library.jhu.edu/
+      instrepo:
+        name:
+          short: JScholarship
+          long: JScholarship
+        url: https://jscholarship.library.jhu.edu/
 
-  datarepo:
-    name:
-      short: The JHU Data Archive
-      long: The Johns Hopkins University Data Archive
-    url: https://archive.data.jhu.edu/
+      datarepo:
+        name:
+          short: The JHU Data Archive
+          long: The Johns Hopkins University Data Archive
+        url: https://archive.data.jhu.edu/
 
-  levycoll:
-    name:
-      short: The Levy Sheet Music Collection
-      long: The Lester S. Levy Sheet Music Collection
-    url: http://levysheetmusic.mse.jhu.edu/
+      levycoll:
+        name:
+          short: The Levy Sheet Music Collection
+          long: The Lester S. Levy Sheet Music Collection
+        url: http://levysheetmusic.mse.jhu.edu/
 
   # make changes to this one. it is merged into others below.
   local_component_pui_sections: &pui_component_sections
