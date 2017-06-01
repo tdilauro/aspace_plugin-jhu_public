@@ -14,9 +14,9 @@ en:
     jhu_public:
       contactus:
         name:
-          short: Contact Us!
-          long: Contact Us!
-        url: mailto:specialcollections@lists.jhu.edu
+          short: Contact Us
+          long: Contact Us
+        url: mailto:specialcollections@lists.jhu.edu?subject=ArchivesSpace - Contact Us
 
       instrepo:
         name:
