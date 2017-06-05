@@ -7,26 +7,18 @@ ArchivesSpacePublic::Application.config.after_initialize do
   ApplicationHelper
   module ApplicationHelper
 
-    # def title_or_finding_aid_filing_title(resource)
-    #   if resource["finding_aid_filing_title"] && !resource["finding_aid_filing_title"].nil? && resource["finding_aid_filing_title"].length > 0
-    #     title = resource["finding_aid_filing_title"]
-    #   elsif resource["title"] && !resource["title"].nil?
-    #     title = resource["title"]
-    #   else
-    #     title = resource["display_string"]
-    #   end
-    #   displayIdPrefix(resource) + title_or_finding_aid_filing_title(resource)
-    #   MixedContentParser::parse(title, url_for(:root)).to_s.html_safe
-    # end
-
     def title_or_finding_aid_filing_title_with_ids(resource)
       displayIdPrefix(resource) + title_or_finding_aid_filing_title(resource)
     end
 
-
     def displayIdPrefix(resource, sep='.', prefix='[', suffix=']')
-      id_string = (['id_0', 'id_1', 'id_2', 'id_3'].collect{|attr| resource[attr]} - ['', nil]).join(sep)
+      #id_string = (['id_0', 'id_1', 'id_2', 'id_3'].collect{|attr| resource[attr]} - ['', nil]).join(sep)
+      id_string = displayId(resource, sep=sep)
       prefix + id_string + suffix + ' '
+    end
+
+    def displayId(resource, sep='.')
+      (['id_0', 'id_1', 'id_2', 'id_3'].collect{|attr| resource[attr]} - ['', nil]).join(sep)
     end
 
   end

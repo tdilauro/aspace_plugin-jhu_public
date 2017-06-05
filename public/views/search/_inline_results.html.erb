@@ -1,34 +1,52 @@
+<!-- <%= @search_data['results'].inspect %> -->
 <div class="search-results">
 <% if search_data.results? %>
   <%= render_aspace_partial :partial => "search/pagination_summary", :locals => {:search_data => search_data} %>
-  <ul class="results-list">
-    <% search_data['results'].each do |result| %>
-      <%
-         id = JSONModel(result["primary_type"]).id_for(result['uri'])
-         repo_id = JSONModel(:repository).id_for(JSONModel.repository_for(result['uri']),{}, true)
-      %>
-      <li class="result">
-        <h3>
-          <%= icon_for result["primary_type"] %>
-          <% if result["primary_type"] === "subject" %>
-            <%= link_to result["title"], {"filter_term" => search_data.facet_query_string("subjects", result["title"])} %>
-          <% elsif ["agent_person", "agent_software", "agent_family", "agent_corporate_entity"].include?(result["primary_type"]) %>
-            <%= link_to result['title'], :controller => :records, :action => :agent, :id => id, :agent_type => result["primary_type"] %>
-          <% elsif result["primary_type"] === "repository" %>
-            <%= link_to result['title'], :controller => :search, :action => :repository, :repo_id => id %>
-          <% else %>
-            <% resource = JSONModel(:resource).find(id, :repo_id => repo_id) %>
-            <%= displayIdPrefix(resource, sep='.') %>
-            <%= link_to title_or_finding_aid_filing_title(resource)  , :controller => :records, :action => result["primary_type"], :id => id, :repo_id => repo_id %>
-            <!-- <%= link_to title_or_finding_aid_filing_title_with_ids(resource)  , :controller => :records, :action => result["primary_type"], :id => id, :repo_id => repo_id %> -->
-          <% end %>
-        </h3>
-        <div class="result-summary">
-          <%= render_aspace_partial :partial => "search/result_summary_#{result["primary_type"]}", :locals => {:obj => result} %>
-        </div>
-      </li>
-    <% end %>
-  </ul>
+
+  <!-- <table id="tabledSearchResults" class="table table-striped table-bordered table-condensed table-hover table-sortable table-search-results"> -->
+  <table id="tabledSearchResults" class="table table-condensed table-hover table-search-results">
+    <thead>
+    <tr>
+      <th><%= I18n.t("search_results.result_title") %></th>
+      <th><%= I18n.t("search_sorting.identifier") %></th>
+    </tr>
+    </thead>
+    <tbody class="results-list">
+      <% @search_data['results'].each do |result| %>
+        <%
+          id = JSONModel(result["primary_type"]).id_for(result['uri'])
+          repo_id = JSONModel(:repository).id_for(JSONModel.repository_for(result['uri']),{}, true)
+          resource = nil
+        %>
+        <tr class="result">
+          <td>
+            <%= icon_for result["primary_type"] %>
+            <% if result["primary_type"] === "subject" %>
+                <%= link_to result["title"], {"filter_term" => search_data.facet_query_string("subjects", result["title"])} %>
+            <% elsif ["agent_person", "agent_software", "agent_family", "agent_corporate_entity"].include?(result["primary_type"]) %>
+                <%= link_to result['title'], :controller => :records, :action => :agent, :id => id, :agent_type => result["primary_type"] %>
+            <% elsif result["primary_type"] === "repository" %>
+                <%= link_to result['title'], :controller => :search, :action => :repository, :repo_id => id %>
+            <% elsif result["primary_type"] === "resource" %>
+                <%= link_to title_or_finding_aid_filing_title( result )  , :controller => :records, :action => result["primary_type"], :id => id, :repo_id => repo_id %>
+                <% resource = JSONModel(:resource).find(id, :repo_id => repo_id) %>
+            <% else %>
+                <%= link_to title_or_finding_aid_filing_title( result )  , :controller => :records, :action => result["primary_type"], :id => id, :repo_id => repo_id %>
+            <% end %>
+            <div class="result-summary">
+              <%= render_aspace_partial :partial => "search/result_summary_#{result["primary_type"]}", :locals => {:obj => result} %>
+            </div>
+
+          </td>
+          <td style="width: 1px; margin: 0; white-space:nowrap;">
+            <%= resource.present? ? displayId(resource, sep='.') : "" %>
+          </td>
+        </tr>
+
+      <% end %>
+    </tbody>
+  </table>
+
   <%= render_aspace_partial :partial => "search/pagination", :locals => {:search_data => search_data} %>
 <% else %>
   <p class="alert alert-info">
