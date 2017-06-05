@@ -21,6 +21,7 @@
             <li <% if params["type"]==="agent"%> class="active" <% end%>><%= link_to I18n.t("agent._plural"),  {:controller => :search, :action => :search, :type => "agent"} %></li>
             <!-- <li <% if params["type"]==="classification"%> class="active" <% end%>><%= link_to I18n.t("classification._plural"),  {:controller => :search, :action => :search, :type => "classification"} %></li> -->
             <li class="pull-right"><%= link_to(I18n.t("plugins.jhu_public.contactus.name.short"), I18n.t("plugins.jhu_public.contactus.url")) %></li>
+            <li class="divider-vertical pull-right"></li>
             <% if not current_page?(root_url) %>
                 <li class="pull-right">
                   <%= form_tag(url_for(:controller => :search, :action => :search), :method => :get, :class => "navbar-form pull-left") do %>
