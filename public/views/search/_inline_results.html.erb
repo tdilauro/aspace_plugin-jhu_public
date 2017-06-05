@@ -1,9 +1,7 @@
-<!-- <%= @search_data['results'].inspect %> -->
 <div class="search-results">
 <% if search_data.results? %>
   <%= render_aspace_partial :partial => "search/pagination_summary", :locals => {:search_data => search_data} %>
 
-  <!-- <table id="tabledSearchResults" class="table table-striped table-bordered table-condensed table-hover table-sortable table-search-results"> -->
   <table id="tabledSearchResults" class="table table-condensed table-hover table-search-results">
     <thead>
     <tr>

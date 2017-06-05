@@ -12,7 +12,6 @@ ArchivesSpacePublic::Application.config.after_initialize do
     end
 
     def displayIdPrefix(resource, sep='.', prefix='[', suffix=']')
-      #id_string = (['id_0', 'id_1', 'id_2', 'id_3'].collect{|attr| resource[attr]} - ['', nil]).join(sep)
       id_string = displayId(resource, sep=sep)
       prefix + id_string + suffix + ' '
     end
@@ -58,7 +57,7 @@ ArchivesSpacePublic::Application.config.after_initialize do
         if record["node_type"] === "resource"
           resource = JSONModel(:resource).find(record["id"], :repo_id => params[:repo_id])
           raise RecordNotFound.new if (!resource || !resource.publish)
-          puts resource.inspect
+
           @resource_uri = record['record_uri']
           breadcrumb_title = title_or_finding_aid_filing_title_with_ids(resource)
           @breadcrumbs.push([breadcrumb_title, url_for(:controller => :records, :action => :resource, :id => record["id"], :repo_id => @repository.id), "resource"])
