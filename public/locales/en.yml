@@ -7,7 +7,7 @@ en:
       Search the Sheridan Libraries' collection guides for university records and manuscript collections below.
       For access to digital collections, please visit
       our institutional repository, %{instrepo},
-      our collection of online sheet music, %{levycoll}.
+      our collection of online sheet music, %{levycoll},
       or our data repository, %{datarepo}.
 
   plugins:
