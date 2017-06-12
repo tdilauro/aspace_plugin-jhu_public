@@ -16,7 +16,7 @@ en:
         name:
           short: Contact Us
           long: Contact Us
-        url: mailto:specialcollections@lists.jhu.edu?subject=ArchivesSpace - Contact Us
+        url: "#"
 
       instrepo:
         name:
@@ -35,6 +35,8 @@ en:
           short: The Levy Sheet Music Collection
           long: The Lester S. Levy Sheet Music Collection
         url: http://levysheetmusic.mse.jhu.edu/
+
+      identifier: Collection Number
 
   # make changes to this one. it is merged into others below.
   local_component_pui_sections: &pui_component_sections
