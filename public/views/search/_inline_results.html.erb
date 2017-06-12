@@ -37,7 +37,7 @@
 
           </td>
           <td style="width: 1px; margin: 0; white-space:nowrap;">
-            <%= resource.present? ? displayId(resource, sep='.') : "" %>
+            <%= !resource.nil? ? displayId(resource, sep='.') : "" %>
           </td>
         </tr>
 
