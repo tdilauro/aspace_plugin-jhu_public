@@ -1,12 +1,12 @@
 <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#app-navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="nav-collapse collapse">
+      <div class="nav-collapse collapse" id="app-navbar">
         <div class="container top">
           <ul class="nav">
             <li <% if controller_name === "site" and controller.action_name === "index" %>class="active"<% end %>>
@@ -20,7 +20,7 @@
             <li <% if params["type"]==="subject"%> class="active" <% end%>><%= link_to I18n.t("subject._plural"),  {:controller => :search, :action => :search, :type => "subject"} %></li>
             <li <% if params["type"]==="agent"%> class="active" <% end%>><%= link_to I18n.t("agent._plural"),  {:controller => :search, :action => :search, :type => "agent"} %></li>
             <!-- <li <% if params["type"]==="classification"%> class="active" <% end%>><%= link_to I18n.t("classification._plural"),  {:controller => :search, :action => :search, :type => "classification"} %></li> -->
-            <li class="pull-right"><%= link_to(I18n.t("plugins.jhu_public.contactus.name.short"), I18n.t("plugins.jhu_public.contactus.url")) %></li>
+            <li class="contact-us"><%= link_to(I18n.t("plugins.jhu_public.contactus.name.short"), I18n.t("plugins.jhu_public.contactus.url")) %></li>
             <li class="divider-vertical pull-right"></li>
             <% if not current_page?(root_url) %>
                 <li class="pull-right">

@@ -2,16 +2,15 @@ en:
   brand:
     title: Johns Hopkins University Libraries Archives Public Interface
     home: Home
-    welcome_message: Welcome to ArchivesSpace.
+    welcome_message: Welcome to ArchivesSpace
     welcome_search_label: >
-      Search the Sheridan Libraries' collection guides for university records and manuscript collections below.
-      For access to digital collections, please visit
-      our institutional repository, %{instrepo},
-      our collection of online sheet music, %{levycoll},
-      or our data repository, %{datarepo}.
+      Search the Sheridan Libraries' collection guides for university records and manuscript collections.
 
   plugins:
     jhu_public:
+      brand:
+        applabel: ArchivesSpace
+
       contactus:
         name:
           short: Contact Us
@@ -19,24 +18,38 @@ en:
         url: "#"
 
       instrepo:
+        role: institutional repository
         name:
           short: JScholarship
           long: JScholarship
         url: https://jscholarship.library.jhu.edu/
 
       datarepo:
+        role: data repository
         name:
           short: The JHU Data Archive
           long: The Johns Hopkins University Data Archive
         url: https://archive.data.jhu.edu/
 
       levycoll:
+        role: collection
         name:
           short: The Levy Sheet Music Collection
           long: The Lester S. Levy Sheet Music Collection
         url: http://levysheetmusic.mse.jhu.edu/
 
-      identifier: Collection Number
+      identifier: Identifier
+
+      digicoll:
+        heading: 'For access to our digital collections, please visit:'
+
+      jhu_nav:
+        - {'link': 'http://library.jhu.edu/', 'label': 'Sheridan Libraries' }
+        - {'link': 'http://welch.jhmi.edu/', 'label': 'Welch Medical Library' }
+        - {'link': 'http://www.sais-jhu.edu/library/', 'label': 'SAIS Library' }
+        - {'link': 'http://musiclibrary.peabody.jhu.edu/', 'label': 'Freidheim Library' }
+        - {'link': 'https://aplweb/departments/itsd/iks/Pages/IKS.aspx', 'label': 'APL Library' }
+
 
   # make changes to this one. it is merged into others below.
   local_component_pui_sections: &pui_component_sections

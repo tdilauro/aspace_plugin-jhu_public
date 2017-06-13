@@ -32,6 +32,24 @@
         </li>
       </ul>
 
+      <div>
+        <hr />
+        <p><%= I18n.t("plugins.jhu_public.digicoll.heading").html_safe %></p>
+        <ul>
+          <li>
+            <%= link_to(I18n.t("plugins.jhu_public.instrepo.name.long"), I18n.t("plugins.jhu_public.instrepo.url")) %>
+            (<%= I18n.t("plugins.jhu_public.instrepo.role").html_safe %>)
+          </li>
+          <li>
+            <%= link_to(I18n.t("plugins.jhu_public.levycoll.name.long"), I18n.t("plugins.jhu_public.levycoll.url")) %>
+            (<%= I18n.t("plugins.jhu_public.levycoll.role").html_safe %>)
+          </li>
+          <li>
+            <%= link_to(I18n.t("plugins.jhu_public.datarepo.name.long"), I18n.t("plugins.jhu_public.datarepo.url")) %>
+            (<%= I18n.t("plugins.jhu_public.datarepo.role").html_safe %>)
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="span4">
 
