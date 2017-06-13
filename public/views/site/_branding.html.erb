@@ -1,0 +1,29 @@
+<div class="navbar" id="jhu-main-nav">
+  <div class="navbar-inner">
+    <!--<div class="container">-->
+    <span class="jhu-menu-heading" id="jhu-menu-heading-text">RETURN TO YOUR LIBRARY:</span>
+    <!--<button type="button" class="btn btn-navbar pull-right" data-toggle="collapse" data-target="#jhu-navbar" aria-expanded="false">-->
+      <!--<span class="sr-only">Toggle navigation</span>-->
+      <!--<span class="icon-bar"></span>-->
+      <!--<span class="icon-bar"></span>-->
+      <!--<span class="icon-bar"></span>-->
+    <!--</button>-->
+    <!--</div>-->
+    <nav class="navbar" id="jhu-navbar">
+      <ul class="nav">
+        <% I18n.t("plugins.jhu_public.jhu_nav").each do |site| %>
+            <li><%= link_to site['label'], site['link'] %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <div class="jhu-branding-org">
+    <%= image_tag "themes/jhu_public_theme/libraries.logo.small.horizontal.blue.png", :alt => I18n.t("brand.title") %>
+  </div>
+  <div class="jhu-branding-app pull-right">
+    <%#= image_tag "archivesspace/archivesspace.png", :alt => I18n.t("brand.title") %>
+    <%= I18n.t("plugins.jhu_public.brand.applabel") %>
+  </div>
+</div>
