@@ -6,13 +6,10 @@
   <div class="row-fluid">
     
     <div class="span8">
-      
-      <h3><%= I18n.t("brand.welcome_message") %></h3>
-      <p><%= I18n.t("brand.welcome_search_label",
-                    :instrepo => link_to(I18n.t("plugins.jhu_public.instrepo.name.short"), I18n.t("plugins.jhu_public.instrepo.url")),
-                    :datarepo => link_to(I18n.t("plugins.jhu_public.datarepo.name.short"), I18n.t("plugins.jhu_public.datarepo.url")),
-                    :levycoll => link_to(I18n.t("plugins.jhu_public.levycoll.name.short"), I18n.t("plugins.jhu_public.levycoll.url"))
-             ).html_safe %></p>
+      <h3>
+        <%= I18n.t("brand.welcome_message", :service_name => I18n.t("plugins.jhu_public.brand.applabel")).html_safe %>
+      </h3>
+      <p><%= I18n.t("brand.welcome_search_label").html_safe %></p>
 
       <div class="tab-content">
         <div id="simpleSearch" class="tab-pane active">
@@ -37,15 +34,15 @@
         <p><%= I18n.t("plugins.jhu_public.digicoll.heading").html_safe %></p>
         <ul>
           <li>
-            <%= link_to(I18n.t("plugins.jhu_public.instrepo.name.long"), I18n.t("plugins.jhu_public.instrepo.url")) %>
+            <%= link_to(I18n.t("plugins.jhu_public.instrepo.name.long").html_safe, I18n.t("plugins.jhu_public.instrepo.url")) %>
             (<%= I18n.t("plugins.jhu_public.instrepo.role").html_safe %>)
           </li>
           <li>
-            <%= link_to(I18n.t("plugins.jhu_public.levycoll.name.long"), I18n.t("plugins.jhu_public.levycoll.url")) %>
+            <%= link_to(I18n.t("plugins.jhu_public.levycoll.name.long").html_safe, I18n.t("plugins.jhu_public.levycoll.url")) %>
             (<%= I18n.t("plugins.jhu_public.levycoll.role").html_safe %>)
           </li>
           <li>
-            <%= link_to(I18n.t("plugins.jhu_public.datarepo.name.long"), I18n.t("plugins.jhu_public.datarepo.url")) %>
+            <%= link_to(I18n.t("plugins.jhu_public.datarepo.name.long").html_safe, I18n.t("plugins.jhu_public.datarepo.url")) %>
             (<%= I18n.t("plugins.jhu_public.datarepo.role").html_safe %>)
           </li>
         </ul>
