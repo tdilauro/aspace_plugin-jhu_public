@@ -44,7 +44,7 @@ en:
         heading: 'For access to our digital collections, please visit:'
 
       jhu_nav:
-        heading: 'RETURN TO YOUR LIBRARY:'
+        menu_heading: 'RETURN TO YOUR LIBRARY:'
         links:
           - {'link': 'http://library.jhu.edu/', 'label': 'Sheridan Libraries' }
           - {'link': 'http://welch.jhmi.edu/', 'label': 'Welch Medical Library' }
@@ -52,6 +52,8 @@ en:
           - {'link': 'http://musiclibrary.peabody.jhu.edu/', 'label': 'Freidheim Library' }
           - {'link': 'https://aplweb/departments/itsd/iks/Pages/IKS.aspx', 'label': 'APL Library' }
 
+      app_nav:
+        menu_heading: MENU
 
   # make changes to this one. it is merged into others below.
   local_component_pui_sections: &pui_component_sections
