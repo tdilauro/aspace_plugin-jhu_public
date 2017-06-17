@@ -1,0 +1,262 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2792584, 2014-04-10T13:17:10-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2792584
+ * Licensed pageviews: 1,000,000
+ *
+ * © 2014 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+/* @import url("//hello.myfonts.net/count/2a9c88"); */
+
+
+
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*/// GENTONA ////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////*/
+
+/*===================*/
+/*=== Heavy (900) ===*/
+/*===================*/
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-Heavy.eot');
+  src: asset-url('@{fontLoc}/Gentona-Heavy.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-Heavy.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-HeavyItalic.eot');
+  src: asset-url('@{fontLoc}/Gentona-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-HeavyItalic.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-HeavyItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+
+
+
+/*========================*/
+/*=== Extra Bold (800) ===*/
+/*========================*/
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-ExtraBold.eot');
+  src: asset-url('@{fontLoc}/Gentona-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-ExtraBold.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-ExtraBoldItalic.eot');
+  src: asset-url('@{fontLoc}/Gentona-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-ExtraBoldItalic.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+
+
+
+
+/*==================*/
+/*=== Bold (700) ===*/
+/*==================*/
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-Bold.eot');
+  src: asset-url('@{fontLoc}/Gentona-Bold.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-Bold.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-BoldItalic.eot');
+  src: asset-url('@{fontLoc}/Gentona-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-BoldItalic.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+
+
+/*======================*/
+/*=== Semi-Bold (600) ===*/
+/*======================*/
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-SemiBold.eot');
+  src: asset-url('@{fontLoc}/Gentona-SemiBold.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-SemiBold.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-SemiBoldItalic.eot');
+  src: asset-url('@{fontLoc}/Gentona-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-SemiBoldItalic.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+
+
+
+
+/*====================*/
+/*=== Medium (500) ===*/
+/*====================*/
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-Medium.eot');
+  src: asset-url('@{fontLoc}/Gentona-Medium.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-Medium.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-MediumItalic.eot');
+  src: asset-url('@{fontLoc}/Gentona-MediumItalic.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-MediumItalic.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+
+
+
+/*==================*/
+/*=== Book (400) ===*/
+/*==================*/
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-Book.eot');
+  src: asset-url('@{fontLoc}/Gentona-Book.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-Book.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-BookItalic.eot');
+  src: asset-url('@{fontLoc}/Gentona-BookItalic.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-BookItalic.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-BookItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+
+
+/*===================*/
+/*=== Light (300) ===*/
+/*===================*/
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-Light.eot');
+  src: asset-url('@{fontLoc}/Gentona-Light.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-Light.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-LightItalic.eot');
+  src: asset-url('@{fontLoc}/Gentona-LightItalic.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-LightItalic.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+
+
+
+/*=========================*/
+/*=== Extra Light (200) ===*/
+/*=========================*/
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-ExtraLight.eot');
+  src: asset-url('@{fontLoc}/Gentona-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-ExtraLight.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-ExtraLightItalic.eot');
+  src: asset-url('@{fontLoc}/Gentona-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-ExtraLightItalic.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+
+
+
+
+/*==================*/
+/*=== Thin (100) ===*/
+/*==================*/
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-Thin.eot');
+  src: asset-url('@{fontLoc}/Gentona-Thin.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-Thin.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona';
+  src: asset-url('@{fontLoc}/Gentona-ThinItalic.eot');
+  src: asset-url('@{fontLoc}/Gentona-ThinItalic.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Gentona-ThinItalic.woff') format('woff'),
+       asset-url('@{fontLoc}/Gentona-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}

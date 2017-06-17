@@ -1,0 +1,52 @@
+/*////////////////////////////////////////////////////////////////////////////*/
+/*/// TITLING GOTHIC /////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////*/
+
+
+/*==================*/
+/*=== Bold (700) ===*/
+/*==================*/
+@font-face {
+  font-family: 'titling-gothic';
+  src: asset-url('@{fontLoc}/Titling-Gothic-Bold.eot');
+  src: asset-url('@{fontLoc}/Titling-Gothic-Bold.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Titling-Gothic-Bold.woff') format('woff'),
+       asset-url('@{fontLoc}/Titling-Gothic-Bold.ttf') format('truetype'),
+       asset-url('@{fontLoc}/Titling-Gothic-Bold.svg#titlinggothicbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+
+/*====================*/
+/*=== Medium (500) ===*/
+/*====================*/
+@font-face {
+  font-family: 'titling-gothic';
+  src: asset-url('@{fontLoc}/Titling-Gothic-Medium.eot');
+  src: asset-url('@{fontLoc}/Titling-Gothic-medium.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Titling-Gothic-medium.woff') format('woff'),
+       asset-url('@{fontLoc}/Titling-Gothic-medium.ttf') format('truetype'),
+       asset-url('@{fontLoc}/Titling-Gothic-medium.svg#titlinggothicmedium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+
+/*=====================*/
+/*=== Regular (300) ===*/
+/*=====================*/
+@font-face {
+  font-family: 'titling-gothic';
+  src: asset-url('@{fontLoc}/Titling-Gothic-Regular.eot');
+  src: asset-url('@{fontLoc}/Titling-Gothic-Regular.eot?#iefix') format('embedded-opentype'),
+       asset-url('@{fontLoc}/Titling-Gothic-Regular.woff') format('woff'),
+       asset-url('@{fontLoc}/Titling-Gothic-Regular.ttf') format('truetype'),
+       asset-url('@{fontLoc}/Titling-Gothic-Regular.svg#titlinggothicregular') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
