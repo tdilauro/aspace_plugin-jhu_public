@@ -1,0 +1,33 @@
+<%
+  @term_map ||= {}
+  set_title_for_search
+%>
+<div class="content-pane">
+  <div class="row-fluid">
+    <div class="span3">
+      <div class="navbar" id="aspace-facets">
+        <div class="navbar-inner">
+          <!--<div class="container">-->
+            <span class="nav-heading" id="search-facets-heading" data-toggle="collapse" data-target="#search-facets">
+              <%= I18n.t("plugins.jhu_public.app_nav.filter_heading") %>
+            </span>
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#search-facets">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="nav-collapse collapse" id="search-facets">
+              <%= render_aspace_partial :partial => "search/components_switch" %>
+              <%= render_aspace_partial :partial => "search/filter" %>
+            </div>
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+    <div class="span9">
+      <div class="record-pane">
+        <%= render_aspace_partial :partial => "inline_results", :locals => {:search_data => @search_data} %>
+      </div>
+    </div>
+  </div>
+</div>

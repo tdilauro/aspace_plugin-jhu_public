@@ -54,6 +54,7 @@ en:
 
       app_nav:
         menu_heading: MENU
+        filter_heading: 'Show/Hide Search Filters'
 
   # make changes to this one. it is merged into others below.
   local_component_pui_sections: &pui_component_sections
