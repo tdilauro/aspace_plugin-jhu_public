@@ -2,10 +2,23 @@
   <div class="row-fluid">
     <div class="span8" id="contact_us_block">
       <h1>Contact Us</h1>
-      <p>Phone: 410-516-8348</p>
-      <p>Email: <a href="<%= "mailto:specialcollections@lists.jhu.edu?subject=[ArchivesSpace] #{request.original_url}"%>">
-        specialcollections@lists.jhu.edu</a></p>
-      <p>This page: <%= request.original_url %></p>
+      <p>
+        <%= I18n.t("plugins.jhu_public.contactus.phone.label").html_safe %>
+        <%= I18n.t("plugins.jhu_public.contactus.phone.value").html_safe %>
+      </p>
+      <p>
+        <%= I18n.t("plugins.jhu_public.contactus.email.label").html_safe %>
+        <%= link_to(I18n.t("plugins.jhu_public.contactus.email.value"),
+                    "mailto:#{I18n.t("plugins.jhu_public.contactus.email.value")}?subject=[#{I18n.t("plugins.jhu_public.brand.applabel")}] #{request.original_url}",
+                    :title => "Contact Us for: #{URI.unescape(request.original_url)}") %>
+      </p>
+      <p>
+        <%= I18n.t("plugins.jhu_public.contactus.ref_url.label").html_safe %>
+        <%= request.original_url %></p>
+      <p>
+        <%= I18n.t("plugins.jhu_public.contactus.address.label").html_safe %>
+        <%= I18n.t("plugins.jhu_public.contactus.address.value").html_safe %>
+      </p>
     </div>
     <div class="span4">
       <p><% if AppConfig[:enable_frontend] and not proxy_localhost? %>View <a href="<%= AppConfig[:frontend_proxy_url] %>">Staff Interface</a> | <% end %>Powered by ArchivesSpace <%= ASConstants.VERSION %></p>
