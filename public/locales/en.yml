@@ -60,7 +60,7 @@ en:
           - {'link': 'http://library.jhu.edu/', 'label': 'Sheridan Libraries' }
           - {'link': 'http://welch.jhmi.edu/', 'label': 'Welch Medical Library' }
           - {'link': 'http://www.sais-jhu.edu/library/', 'label': 'SAIS Library' }
-          - {'link': 'http://musiclibrary.peabody.jhu.edu/', 'label': 'Freidheim Library' }
+          - {'link': 'http://musiclibrary.peabody.jhu.edu/', 'label': 'Friedheim Library' }
           - {'link': 'https://aplweb/departments/itsd/iks/Pages/IKS.aspx', 'label': 'APL Library' }
 
       app_nav:
