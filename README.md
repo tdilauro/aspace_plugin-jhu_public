@@ -37,7 +37,7 @@ other key repositories (JScholarship, Levy, and JHU Data Archive).
 ### Search results:
 - Added callno/identifier column to results
 - Added column headings, since there are now two columns in the results
-- Added responsive "show/hide facets/filters" to make use
+- Added responsive "show/hide facets/filters" to make usable on mobile devices
 
 ---
 
