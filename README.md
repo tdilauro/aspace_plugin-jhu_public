@@ -46,9 +46,13 @@ other key repositories (JScholarship, Levy, and JHU Data Archive).
   - Clone this repository into the plugins/jhu_public directory; or
   - Unzip the release zip into the plugins/jhu_public directory.
 
-- Enable the plugin:
-  - Edit the config/config.rb file to add the plugin name to the "AppConfig[:plugins]" list, e.g.:
+- Enable the plugin and the associated theme:
+  - In config/config.rb, add the plugin name to the "AppConfig[:plugins]" list, e.g.:
 
     AppConfig[:plugins] = ['jhu_public']
+
+  - In config/config.rb, set the public theme variable (AppConfig[:public_theme]) to "jhu_public_theme":
+
+    AppConfig[:public_theme] = "jhu_public_theme"
 
 - Restart ArchivesSpace
