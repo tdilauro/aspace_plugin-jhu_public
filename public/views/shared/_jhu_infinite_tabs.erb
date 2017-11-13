@@ -1,0 +1,69 @@
+<%# JHU - suppress container inventory in public display %>
+<ul class="tabbing nav nav-pills">
+  <li><%= link_to t('actions.collection_overview'), :action => :show %></li>
+  <li><a class='active' href='#'><%= t('actions.hierarch') %></a></li>
+  <!-- jhu - suppress container
+  <li <% unless @has_containers %>class="disabled"<% end %>>
+    <a <% if @has_containers %> href="<%= url_for(:action => :inventory) %>"<% end %> >
+      <%= t('actions.numeric') %>
+    </a>
+  </li>
+  -->
+</ul>
+
+
+<%# from infinite.html.erb %>
+<ul class="tabbing nav nav-pills">
+  <li>
+    <%= link_to t('actions.collection_overview'), :action => :show %>
+  </li>
+  <li>
+    <a class='active' href='#'><%= t('actions.hierarch') %></a>
+  </li>
+  <li <% unless @has_containers %>class="disabled"<% end %>>
+    <a <% if @has_containers %> href="<%= url_for(:action => :inventory) %>"<% end %>><%= t('actions.numeric') %></a>
+  </li>
+</ul>
+
+
+<%# from show.html.erb %>
+<ul class="tabbing nav nav-pills">
+  <li>
+    <a class="active" href="#"><%= t('actions.collection_overview') %></a>
+  </li>
+  <li <% unless @has_children %>class="disabled"<% end %>>
+    <a <% if @has_children %> href="<%= url_for(:action => :infinite) %>" <% end %>><%= t('actions.hierarch') %></a>
+  </li>
+  <li <% unless @has_containers %>class="disabled"<% end %>>
+    <a <% if @has_containers %> href="<%= url_for(:action => :inventory) %>" <% end %>><%= t('actions.numeric') %></a>
+  </li>
+</ul>
+
+<%# from inventory.html.erb %>
+<ul class="tabbing nav nav-pills">
+  <li>
+    <%= link_to t('actions.collection_overview'), :action => :show %>
+  </li>
+  <li <% unless @has_children %>class="disabled"<% end %>>
+    <a <% if @has_children %> href="<%= url_for(:action => :infinite) %>"<% end %>><%= t('actions.hierarch') %></a>
+  </li>
+  <li>
+    <a class='active' href='#'><%= t('actions.numeric') %></a>
+  </li>
+</ul>
+
+
+Collection overview - t('actions.collection_overview') - show?
+infi  <%= link_to t('actions.collection_overview'), :action => :show %>
+show  <a class="active" href="#"><%= t('actions.collection_overview') %></a>
+inve  <%= link_to t('actions.collection_overview'), :action => :show %>
+
+Collection organization - t('actions.hierarch') - infinite
+infi  <a class='active' href='#'><%= t('actions.hierarch') %></a>
+show  <a <% if @has_children %> href="<%= url_for(:action => :infinite) %>"<% end %>><%= t('actions.hierarch') %></a>
+  <a <% if @has_children %> href="<%= url_for(:action => :infinite) %>"<% end %>><%= t('actions.hierarch') %></a>
+
+Container Inventory - inventory
+infi <a <% if @has_containers %> href="<%= url_for(:action => :inventory) %>"<% end %>><%= t('actions.numeric') %></a>
+show <a <% if @has_containers %> href="<%= url_for(:action => :inventory) %>" <% end %>><%= t('actions.numeric') %></a>
+inve <a class='active' href='#'><%= t('actions.numeric') %></a>

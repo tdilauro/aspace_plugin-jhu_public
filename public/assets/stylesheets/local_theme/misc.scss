@@ -1,0 +1,227 @@
+// Application settings
+
+// use default theme for defaults
+
+@import "jhu_fonts";
+
+
+$paginationActiveBackground: #f5f5f5;
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  color: $grayLight;
+  cursor: default;
+}
+
+
+
+// Application styles
+
+.span3x {
+  //float:right !important;
+  padding: 10px 20px 20px 20px;
+
+  #search-facets-heading {
+    font-family: $jhuBodyFontFamily, sans-serif;
+    color: $jhuBlue;
+  }
+
+  .navbar {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  @media (max-width: 767px) {
+    li {
+      padding: 5px 5px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    //.navbar { all: inherit; }
+    padding: inherit;
+
+    .navbar-inner { all: inherit; }
+    .btn-navbar { display: none; }
+    .nav-heading { display: none; }
+    .nav-collapse, .collapse {
+      all: inherit;
+      height: auto !important;
+    }
+  }
+}
+.span9 {
+  //float: left !important;
+  //margin-left: 0 !important;
+  @media (max-width: 767px) {
+    .table-search-results {
+    }
+    .table-condensed th,
+    .table-condensed td {
+      padding: 10px 5px;
+      font-size: $siteResultsMobileFontSize;
+    }
+  }
+
+}
+
+// control screen reader stuff
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  background: none;
+}
+
+.badge-info {
+  background-color: $jhuBlue;
+  font-weight: normal;
+}
+
+.table-search-results {
+  font-size: $siteResultsStandardFontSize;
+}
+
+// special behaviors for "contact us" link
+.contact-us {
+  float: none;
+
+  @media (min-width: 980px) {
+    float: right !important;
+  }
+}
+
+.footer {
+  // contact us
+  #contact_us_block {
+    text-align: left;
+    line-height: 15px;
+    h1 {
+      font-size: inherit;
+      line-height: 20px;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  .span4 p {
+    @media (max-width: 768px) {
+      text-align: left;
+    }
+  }
+}
+
+
+%nav-heading {
+  font-family: $jhuHeadingsFontFamily, sans-serif;
+  float: left;
+  cursor: pointer;
+  height: 100%;
+  overflow: hidden;
+  padding: 10px 5px 10px 0;
+  font-size: larger;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-heading, .nav-heading:focus, .nav-heading:active {
+  @extend %nav-heading;
+}
+
+
+.app-nav-heading {
+  @extend %nav-heading;
+  color: $appMenuColor;
+
+  @media (min-width: 980px) {
+    display: none;
+  }
+}
+
+// organizational branding
+.jhu-branding-org {
+  float: left;
+  width: 240px;
+  height: 70px;
+  overflow: hidden;
+  padding: 10px 0 10px;
+  margin: 5px 5px 0 5px;
+  vertical-align: middle;
+  display: inline-block;
+
+  img {
+    max-width: 300px;
+    overflow: hidden;
+    margin: -28px 0 0 -30px;
+  }
+}
+
+// application branding
+.jhu-branding-app {
+  float: left;
+  width: 250px;
+  height: 70px;
+  overflow: hidden;
+  padding: 10px 0 10px 0;
+  margin: 5px 15px 0 5px;
+  vertical-align: middle;
+  display: none;
+  font-size: x-large;
+  text-align: left;
+  justify-content: flex-end;
+  align-items: center;
+  color: $appBrandingColor;
+
+  @media (min-width: 600px){
+    float: right;
+    display: flex;
+    text-align: right;
+  }
+}
+
+#jhu-main-nav {
+
+  .jhu-nav-heading {
+    @extend %nav-heading;
+  }
+
+  #jhu-navbar {
+    @media (min-width: 980px) {
+      display: inline-block;
+      height: 30px !important;
+    }
+  }
+
+  .navbar-inner {
+    background: $siteNavBackgroundColor;
+    color: $siteNavLinkColor;
+    border-radius: 0;
+    border-color: $siteNavBackgroundColor;
+  }
+
+  .nav > li {
+    background: $siteNavBackgroundColor;
+    a {
+      padding: 13px 15px 7px;
+      color: $siteNavLinkColor;
+      background: $siteNavBackgroundColor;
+      text-shadow: none;
+      @media (max-width: 979px) {
+        padding: 10px 15px 10px;
+      }
+    }
+    a:hover {
+      color: $siteNavHoverColor;
+    }
+  }
+}

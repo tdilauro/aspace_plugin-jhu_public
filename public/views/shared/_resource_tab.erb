@@ -1,0 +1,10 @@
+<% active = (action == referrer) %>
+<% unless hidden %>
+  <li <% unless enabled %>class="disabled"<% end %>>
+    <a
+      <% if active %>class="active" href="#"
+      <% else %>href="<%= url_for(:action => action) %>"
+      <% end %>
+      ><%= text %> </a>
+  </li>
+<% end %>

@@ -1,0 +1,8 @@
+
+<%= render partial: 'shared/resource_tab', locals: {:action => :show, :text => t('actions.collection_overview'),
+                                                    :enabled => true, :referrer => action, :hidden => false } %>
+<%= render partial: 'shared/resource_tab', locals: {:action => :infinite, :text => t('actions.hierarch'),
+                                                    :enabled => @has_children, :referrer => action, :hidden => false } %>
+<%= render partial: 'shared/resource_tab', locals: {:action => :inventory, :text => t('actions.numeric'),
+                                                    :enabled => @has_containers, :referrer => action,
+                                                    :hidden => AppConfig[:pui_hide][:inventory] } %>

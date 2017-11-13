@@ -11,22 +11,57 @@ en:
       brand:
         applabel: ArchivesSpace
 
+      request:
+        title: Request for Special Collections Non-Book Materials
+        opening_text: >
+          Please note that boxes requested from Special Collections must be used in that department during
+          regular Monday-Friday hours. It will require a minimum of 24 hours to retrieve boxes. Some
+          materials may not be available for administrative or legal reasons.
+        bydate_text: >
+          Minimum 24-hour turnaround, but other factors may also affect delivery. If you are requesting
+          a large number of boxes, please indicate below which are the highest priority. You will be
+          notified when materials are available for use in Reading Room.
+
       contactus:
         name:
           short: Contact Us
           long: Contact Us
+        admin_repo:
+          uri: /repositories/3
+          heading: Administrative Contact
+        corresponding_repo:
+          heading: Corresponding Repository
+        other_repo:
+          heading: Other Repositories
         url: "#"
         ref_url:
           label: 'Reference this link: '
         phone:
           label: 'Phone: '
-          value: '410-516-8348'
+          value: '+1 410-516-8348'
         email:
           label: 'Email: '
           value: 'specialcollections@lists.jhu.edu'
         address:
           label: ''
           value: 'Brody Learning Commons, Room 2045<br />3400 N. Charles Street<br />Baltimore, Maryland<br />21218 USA'
+
+      peabody:
+        name:
+          short: Peabody Archives
+          long: Archives of the Peabody Institute
+        url: "#"
+        ref_url:
+          label: 'Reference this link: '
+        phone:
+          label: 'Phone: '
+          value: '+1 667-208-6661'
+        email:
+          label: 'Email: '
+          value: 'peabodyarchives@lists.jhu.edu'
+        address:
+          label: ''
+          value: 'Arthur Friedheim Music Library<br />17 E. Mount Vernon Place<br />Peabody Institute of the Johns Hopkins University<br />Baltimore, Maryland<br />21202-2397 USA'
 
       instrepo:
         role: institutional repository
@@ -99,6 +134,23 @@ en:
       messages:
         no_components: Digital Object Component has no components
 
+  actions:
+    hierarch: Collection Details
+
+  request:
+    required: required
+    user_name: Your name
+    user_email: Your email address
+    date: Date on which you'd like to use the materials
+    note: Any notes or additional information you wish to include
+    visit: "Submit a request to visit %{repo_name} to view <strong>%{archival_object}</strong>"
+    submit: Submit Request
+    submitted: Thank you, your request has been submitted.  You will soon receive an email with a copy of your request.
+    errors:
+      name: Please enter your name
+      email: Please enter a valid email address
+    email:
+      subject: "Request for %{title}"
 
   record_tree:
     record_tree_tab: Collection Details

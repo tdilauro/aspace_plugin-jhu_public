@@ -1,0 +1,39 @@
+<!--
+<% if defined?(@result) && !@result.blank? %>
+	<br /><%# "*** result: #{@result.inspect} (result) ***" %>
+<% end %>
+<% if defined?(@results) && !@results.blank? %>
+	<br /><%# "*** results: #{@results.inspect} (results) ***" %>
+<% end %>
+-->
+<% if defined?(@context) && !@context.blank? %>
+<div class="clear">
+    <nav aria-label="hierarchical navigation">
+      <ul class="breadcrumb">
+	<%# @context.inspect %>
+	<% @context.each_with_index do |bread, index| %>
+	<% if bread[:crumb] %>
+	<li>
+		<%# bread.inspect %>
+		<% if index == 0 %>
+			<%#
+				bread[:type] = 'repository'
+				bread[:level] = 'Repository'
+			%>
+		<% end %>
+
+		<%= render partial: 'shared/breadcrumb_badge', locals: {:result => bread } %>
+
+		<% if bread.key?(:identifier) %>
+			[<%= process_mixed_content(bread[:identifier]).html_safe %>]
+		<% end %>
+		<% if bread[:uri].blank? %><%= process_mixed_content(bread[:crumb]).html_safe %>
+	  <% else %> <a href='<%=app_prefix(bread[:uri]) %>'><%=  process_mixed_content(bread[:crumb]).html_safe %></a>
+	  <% end %>
+	</li>
+	<% end %>
+	<% end %>
+      </ul>
+    </nav>
+</div>
+<% end %>
